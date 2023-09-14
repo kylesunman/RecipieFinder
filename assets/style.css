@@ -6,21 +6,23 @@ html{
 body{
     background-color:cornsilk;
     width: 50%;
+    color: rgb(179, 109, 19);
     margin-left: 25%;
     height: 95vh;
     background-position-x: center;
     border-radius: 50px;
 }
 header{
+    margin-top: 3%;
     padding-top: 15px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 7%;
+}
+h2, form{
+    margin-bottom: 4%;
 }
 main{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-section.recipes{
-    border: 4px;
-    border-color: burlywood;
 }
