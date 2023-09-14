@@ -34,10 +34,10 @@ document.getElementById("add-ingredient").addEventListener("click", function () 
     }
 });
 function fetchRecipes() {
-  const apiKey = "5ae04e38092e84803117d87ec2025d5e"; // Replace with your actual API key
+  const apiKey = "5ae04e38092e84803117d87ec2025d5e"; 
   const ingredientInput = document.getElementById("ingredient");
-  const ingredientText = encodeURIComponent(ingredientInput.value.trim()); // Get the ingredient text from the input field
-  const recipeList = document.getElementById("recipe-list"); // Assuming your HTML structure matches the provided HTML
+  const ingredientText = encodeURIComponent(ingredientInput.value.trim()); 
+  const recipeList = document.getElementById("recipe-list"); 
 
   const apiUrl = `https://api.example.com/recipes?ingredients=${ingredientText}&apiKey=${apiKey}`;
 
@@ -57,10 +57,10 @@ function fetchRecipes() {
 }
 
 function fetchRecipes() {
-  const apiKey = "5ae04e38092e84803117d87ec2025d5e"; // Replace with your actual API key
+  const apiKey = "5ae04e38092e84803117d87ec2025d5e"; 
   const ingredientInput = document.getElementById("ingredient");
-  const ingredientText = encodeURIComponent(ingredientInput.value.trim()); // Get the ingredient text from the input field
-  const recipeList = document.getElementById("recipe-list"); // Assuming your HTML structure matches the provided HTML
+  const ingredientText = encodeURIComponent(ingredientInput.value.trim()); 
+  const recipeList = document.getElementById("recipe-list"); 
 
   const apiUrl = `https://api.example.com/recipes?ingredients=${ingredientText}&apiKey=${apiKey}`;
 
