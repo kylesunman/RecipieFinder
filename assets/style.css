@@ -3,11 +3,10 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-    
 body {
     background-color: cornsilk;
     width: 50%;
+    color: rgb(179, 109, 19);
     color: rgb(179, 109, 19);
     margin-left: 25%;
     height: 95vh;
@@ -27,6 +26,10 @@ header {
 form,
 h2 {
     margin-bottom: 4%;
+    margin-bottom: 7%;
+}
+h2, form{
+    margin-bottom: 4%;
 }
 main {
     text-align: center;
@@ -34,7 +37,7 @@ main {
 }
 ul{
     width: 15%;
-    margin-left: 40%;
+    margin-left: 39%;
     flex-grow: 1;
     overflow-y: scroll;
     overflow-x:visible;
