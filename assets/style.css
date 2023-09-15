@@ -1,26 +1,45 @@
-html{
-    background-image: url(https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+html {
+    background-image: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
     background-size: cover;
     background-repeat: no-repeat;
 }
-body{
-    background-color:cornsilk;
+body {
+    background-color: cornsilk;
     width: 50%;
+    color: rgb(179, 109, 19);
+    color: rgb(179, 109, 19);
     margin-left: 25%;
     height: 95vh;
     background-position-x: center;
     border-radius: 50px;
+    flex-grow: initial;
+
+    
 }
-header{
+header {
+    margin-top: 3%;
     padding-top: 15px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 7%;
 }
-main{
+form,
+h2 {
+    margin-bottom: 4%;
+    margin-bottom: 7%;
+}
+h2, form{
+    margin-bottom: 4%;
+}
+main {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-section.recipes{
-    border: 4px;
-    border-color: burlywood;
+ul{
+    width: 15%;
+    margin-left: 39%;
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x:visible;
+    max-height: 100px;
 }
