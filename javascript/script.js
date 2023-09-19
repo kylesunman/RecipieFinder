@@ -102,7 +102,7 @@ ingredientInput.addEventListener("keydown", function (event) {
         // Call the fetchRecipes function with the ingredients list
         fetchRecipes(ingredientsArray);
     }
-}
+
 
 function fetchRecipes(ingredientsArray) {
     const apiKey = "5ae04e38092e84803117d87ec2025d5e";
