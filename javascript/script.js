@@ -7,7 +7,7 @@ const recipeList = document.getElementById("recipe-list");
 // Function to add an ingredient to the list and fetch recipes
 function addIngredient() {
   const ingredientValue = ingredientInput.value.trim();
-=======
+
 
 // Function to display recipes on the web page
 function displayRecipes(recipes) {
@@ -98,7 +98,7 @@ ingredientInput.addEventListener("keydown", function (event) {
     addIngredient();
   }
 });
-=======
+  
         // Call the fetchRecipes function with the ingredients list
         fetchRecipes(ingredientsArray);
     }
