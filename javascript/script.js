@@ -3,34 +3,10 @@ const ingredientInput = document.getElementById("ingredient");
 const ingredientList = document.getElementById("ingredient-list");
 const recipeList = document.getElementById("recipe-list");
 
-
-// Function to add an ingredient to the list and fetch recipes
-function addIngredient() {
-  const ingredientValue = ingredientInput.value.trim();
-
-    // Loop through the recipes and create list items to display them
-    recipes.forEach(recipe => {
-        const listItem = document.createElement("li");
-        listItem.textContent = recipe.name; // Replace with the appropriate property from your API data
-        recipeList.appendChild(listItem);
-    });
-}
-
-// Add an event listener to the "Add Ingredient" button
-document.getElementById("add-ingredient").addEventListener("click", function () {
-    addIngredient();
-});
-
-// Add an event listener for the "keydown" event on the input field
-ingredientInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault(); // Prevent the default form submission
-        addIngredient();
-    }
-});
-
-function addIngredient() {
-    const ingredientValue = ingredientInput.value.trim();
+// Function to display recipes on the web page
+function displayRecipes(ingredientValue) {
+  // Clear the previous recipes
+  recipeList.innerHTML = '';
 
   if (ingredientValue !== "") {
     const listItem = document.createElement("li");
@@ -42,7 +18,6 @@ function addIngredient() {
     const ingredientsList = Array.from(document.querySelectorAll("#ingredient-list li"));
     const ingredientsArray = ingredientsList.map(item => item.textContent);
 
-
     // Call the fetchRecipes function with the ingredients list
     fetchRecipes(ingredientsArray);
   }
@@ -53,7 +28,6 @@ function fetchRecipes(ingredientsArray) {
   const apiKey = "5ae04e38092e84803117d87ec2025d5e";
   const ingredientText = encodeURIComponent(ingredientsArray.join(','));
   const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredientText}&app_id=f6f259aa&app_key=${apiKey}`;
-  const recipeList = document.getElementById("recipe-list"); // Get reference to the recipe list in your HTML
 
   fetch(apiUrl)
     .then(response => {
@@ -68,7 +42,7 @@ function fetchRecipes(ingredientsArray) {
 
       for (let i = 0; i < data.hits.length; i++) {
         const recipe = data.hits[i].recipe;
-        
+
         // Create a list item for each recipe and display its label
         const listItem = document.createElement("li");
         listItem.textContent = recipe.label;
@@ -81,6 +55,11 @@ function fetchRecipes(ingredientsArray) {
     });
 }
 
+// Function to add an ingredient to the list and fetch recipes
+function addIngredient() {
+  const ingredientValue = ingredientInput.value.trim();
+  displayRecipes(ingredientValue);
+}
 
 // Add an event listener to the "Add Ingredient" button
 document.getElementById("add-ingredient").addEventListener("click", addIngredient);
@@ -91,4 +70,13 @@ ingredientInput.addEventListener("keydown", function (event) {
     event.preventDefault(); // Prevent the default form submission
     addIngredient();
   }
+});
+
+// Get references to the form, input field, and button
+const form = document.getElementById("ingredient-form");
+
+// Add an event listener to the form's submit event
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent the default form submission
+  addIngredient();
 });
