@@ -5,14 +5,14 @@ html {
 }
 body {
     background-color: cornsilk;
-    max-width: 80%;
     color: rgb(179, 109, 19);
+    max-width: 80%;
+    margin: 0 auto;
     margin-left: 25%;
-    padding-left: 1%;
     height: 90vh;
     background-position-x: center;
     border-radius: 50px;
-    flex-grow: initial;
+
 }
 @media screen and (max-width: 768px) {
 body{
@@ -27,6 +27,8 @@ header {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 7%;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
 }
 form,
 h2 {
