@@ -8,15 +8,12 @@ Screenshot:
 
 ## Table of Contents
 
-- [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-
-## Demo
 
 ## Features
 
@@ -42,8 +39,8 @@ To run Recipe Finder locally, follow these steps:
 
 ## Usage
 
-1. Enter the ingredients you have in your fridge, separating them by commas.
-2. Click the "Find Recipes" button.
+1. Enter the ingredients you have in your fridge.
+2. Clicking the add ingredients button after each ingredient.
 3. Recipe Finder will match your ingredients with recipes and display them on the page.
 
 ## Contributing
