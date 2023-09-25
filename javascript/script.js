@@ -9,14 +9,10 @@ function displayRecipes(ingredientValue) {
   recipeList.innerHTML = '';
 
   if (ingredientValue !== "") {
-    // Create a list item for the added ingredient
     const listItem = document.createElement("li");
     listItem.textContent = ingredientValue;
     ingredientList.appendChild(listItem);
     ingredientInput.value = "";
-
-    // Toggle the "hidden" class to show the ingredient list
-    ingredientList.classList.remove("hidden");
 
     // Get the list of all ingredients
     const ingredientsList = Array.from(document.querySelectorAll("#ingredient-list li"));
@@ -24,9 +20,6 @@ function displayRecipes(ingredientValue) {
 
     // Call the fetchRecipes function with the ingredients list
     fetchRecipes(ingredientsArray);
-  } else {
-    // If no ingredients are added, hide the ingredient list
-    ingredientList.classList.add("hidden");
   }
 }
 
@@ -50,11 +43,14 @@ function fetchRecipes(ingredientsArray) {
       for (let i = 0; i < data.hits.length; i++) {
         const recipe = data.hits[i].recipe;
 
+
         //link code section//
         const link = document.createElement("a");
         link.textContent = recipe.label;
         link.href = recipe.url;
         link.target = "_blank";
+
+
 
         // Create a list item for each recipe and display its label
         const listItem = document.createElement("li");
