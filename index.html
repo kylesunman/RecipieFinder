@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder</title>
-    <link rel="stylesheet" href="./assets/style.css"> 
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- Keep your existing CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<div class = "card">
-<body>
-    <header>
-        <h1>Recipe Finder</h1>
+
+<body class="bg-cornsilk">
+    <header class="text-center bg-yellow-300 py-4">
+        <h1 class="text-3xl font-serif font-semibold">Recipe Finder</h1>
     </header>
-    <main>
-        <section id="ingredients">
-            <h2>Enter Ingredients from Your Fridge</h2>
-            <form id="ingredient-form">
-                <input type="text" id="ingredient" placeholder="Enter an ingredient">
-                <button type="button" id="add-ingredient">Add Ingredient</button>
+    <main class="text-center p-4">
+        <section id="ingredients" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">
+                Enter Ingredients From Your Fridge
+            </h2>
+            <form id="ingredient-form" class="flex justify-center items-center mb-4">
+                <input type="text" id="ingredient" placeholder="Enter An Ingredient"
+                    class="px-2 py-1 border rounded border-gray-300" />
+                <button type="button" id="add-ingredient"
+                    class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">
+                    Add Ingredient
+                </button>
             </form>
-            <div id="ingredient-list">
+            <div id="ingredient-list"
+                class="text-left text-lg max-h-32 overflow-y-scroll mx-4 border border-gray-300 p-2 rounded ">
                 <!-- Display added ingredients here -->
             </div>
         </section>
         <section id="recipes">
-            <h2>Recipes</h2>
-            <div id="recipe-list">
+            <h2 class="text-2xl font-semibold mb-2">Recipes</h2>
+            <div id="recipe-list" class="text-left text-xl mx-16 mb-4">
                 <!-- Display matched recipes here -->
             </div>
         </section>
     </main>
-    <script src="./javascript/script.js"></script> 
+    <script src="./javascript/script.js"></script>
 </body>
-</div>
+
 </html>
