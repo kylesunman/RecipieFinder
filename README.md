@@ -37,6 +37,8 @@ To run Recipe Finder locally, follow these steps:
 1. Clone this repository (git@github.com:kylesunman/RecipieFinder.git)
 2. Open `index.html` in your web browser.
 
+Link: https://kylesunman.github.io/RecipieFinder/
+
 ## Usage
 
 1. Enter the ingredients you have in your fridge.
